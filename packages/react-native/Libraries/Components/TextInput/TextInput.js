@@ -662,6 +662,12 @@ export type Props = $ReadOnly<{|
   enterKeyHint?: ?enterKeyHintType,
 
   /**
+   * If `false`, inline prediction is disabled for the input. The default value is `true`.
+   * @platform ios
+   */
+  inlinePredictionEnabled?: ?boolean,
+
+  /**
    * `inputMode` works like the `inputmode` attribute in HTML, it determines which
    * keyboard to open, e.g.`numeric` and has precedence over keyboardType
    *

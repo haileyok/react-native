@@ -665,7 +665,7 @@ export type Props = $ReadOnly<{|
    * If `false`, inline prediction is disabled for the input. The default value is `true`.
    * @platform ios
    */
-  inlinePredictionEnabled?: ?boolean,
+  inlinePredictionDisabled?: ?boolean,
 
   /**
    * `inputMode` works like the `inputmode` attribute in HTML, it determines which
@@ -1419,6 +1419,8 @@ function InternalTextInput(props: Props): React.Node {
         (style.padding == null &&
           style.paddingVertical == null &&
           style.paddingTop == null));
+
+    console.log(props.inlinePredictionType);
 
     textInput = (
       <RCTTextInputView

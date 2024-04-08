@@ -364,6 +364,17 @@ RCT_NOT_IMPLEMENTED(-(instancetype)initWithFrame : (CGRect)frame)
   }
 }
 
+- (void)setInlinePredictionDisabled:(BOOL)inlinePredictionDisabled
+{
+  if (@available(iOS 17.0, *)) {
+    if (inlinePredictionDisabled) {
+      self.backedTextInputView.inlinePredictionType = UITextInlinePredictionTypeNo;
+    } else {
+      self.backedTextInputView.inlinePredictionType = UITextInlinePredictionTypeDefault;
+    }
+  }
+}
+
 #pragma mark - RCTBackedTextInputDelegate
 
 - (BOOL)textInputShouldBeginEditing

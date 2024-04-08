@@ -59,7 +59,7 @@ RCT_EXPORT_VIEW_PROPERTY(selection, RCTTextSelection)
 RCT_EXPORT_VIEW_PROPERTY(inputAccessoryViewID, NSString)
 RCT_EXPORT_VIEW_PROPERTY(textContentType, NSString)
 RCT_EXPORT_VIEW_PROPERTY(passwordRules, NSString)
-
+RCT_EXPORT_VIEW_PROPERTY(inlinePredictionDisabled, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onKeyPressSync, RCTDirectEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onChangeSync, RCTDirectEventBlock)
